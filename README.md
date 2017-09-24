@@ -1,2 +1,2 @@
 # vuejs
-vuejs, vue2js
+ Este es un proyecto basado en Vuejs
