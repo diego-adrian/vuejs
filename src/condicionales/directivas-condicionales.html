@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Condiciones en Vue</title>
+</head>
+<body>
+    <!-- v-if, v-else-if, v-else es la encargada de eliminar del dom las condiciones que no cumplen-->
+    <main>
+        <div v-if="mostrar">
+            Este texto se mostrara si mostrar es true
+        </div>    
+        <div v-if="!mostrar">
+            Tambien se puede utilizar de esta manera es el tipico negacion del valor
+        </div>
+        <!-- condiciones con v-else-if y v-else-->
+        <!-- Usaremos el ejemplo de la edad-->
+        <div v-if="edad >= 18">
+            Este texto pueden ver las personas que tienen mayores a 18 años
+        </div>
+        <div v-else-if="(edad < 18) && (edad >= 10)">
+            Eres aun un adolescente, los sentimos mucho pero tienes acceso limitado.
+        </div>
+        <div v-else="edad < 9">
+            Eres un niño y por esa razon no tienes acceso.
+        </div>
+        <!-- Tambien puedes usar bloques como templates para agrupar contenido html-->
+        <template v-if="mostrar">
+            <h1>Bienvenido..</h1>
+            <h2>Somos un conjunto de texto que se mostrara al usuario si cumple condiciones</h2>
+            <h3></h3>
+        </template>
+        <template v-else="mostrar">
+            <h1>No tienes acceso</h1>
+        </template>
+    </main>
+    <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+    <script src="./directivas-condicionales.js"></script>
+</body>
+</html>
