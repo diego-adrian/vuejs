@@ -4,8 +4,8 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import Vuetify from 'vuetify';
+import '../node_modules/vuetify/dist/vuetify.min.css';
 import 'babel-polyfill';
-
 Vue.config.productionTip = false;
 
 // Injectando Vuetify
