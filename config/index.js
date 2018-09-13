@@ -1,15 +1,14 @@
-'use strict'
-// Template version: 1.3.1
+'use strict';
+// Template version: 1.2.8
 // see http://vuejs-templates.github.io/webpack for documentation.
 
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/', // AQUÍ DEFINIMOS EL PATH DEL SISTEMA
     proxyTable: {},
 
     // Various Dev Server settings
@@ -39,23 +38,19 @@ module.exports = {
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
-
-    cssSourceMap: true
+    cssSourceMap: true,
   },
-
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
-
+    index: path.resolve(__dirname, '../bpm-admin/index.html'),
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../bpm-admin'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-
+    assetsPublicPath: '/', // DEFINIMOS EL PATH DEL SISTEMA
+    portServer: 3100, // Puerto del servidor para el archivo server.js
     /**
      * Source Maps
      */
-
     productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
@@ -73,4 +68,4 @@ module.exports = {
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
   }
-}
+};
